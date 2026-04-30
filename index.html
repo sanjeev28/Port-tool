@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IP Port Tool · Add/Remove :31401 & http://</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="glass-card">
+    <h1>
+        <span>⚙️ IP Port Manager</span>
+        <span class="badge">+:31401</span>
+    </h1>
+    <div class="sub">Add or remove <strong style="color:#f2c94c">:31401</strong> and optional <strong style="color:#6bd6c9">http://</strong> prefix · bidirectional conversion</div>
 
+    <div class="input-group">
+        <label>📝 IP Addresses (one per line)</label>
+        <textarea id="ipInput" rows="5" placeholder="Examples:
+192.168.1.1
+0:0:0:0
+10.0.0.1:31401
+http://192.168.1.100:31401
+::1
+2001:db8::1"></textarea>
+    </div>
+
+    <div class="checkbox-row">
+        <label class="check-item">
+            <input type="checkbox" id="addHttpCheckbox"> 🌐 Prepend <code style="background:#00000055; padding:2px 6px; border-radius:20px;">http://</code>
+        </label>
+        <label class="check-item">
+            <input type="checkbox" id="removeHttpCheckbox"> ❌ Remove <code>http://</code> (if exists)
+        </label>
+        <label class="check-item">
+            <input type="checkbox" id="removePortCheckbox"> 🧹 Remove <code>:31401</code> suffix
+        </label>
+        <label class="check-item">
+            <input type="checkbox" id="addPortCheckbox"> 🔌 Add <code>:31401</code> suffix
+        </label>
+    </div>
+
+    <div class="action-buttons">
+        <button class="btn btn-primary" id="applyBtn">✨ Transform IPs (Apply rules)</button>
+        <button class="btn btn-secondary" id="resetToOriginalBtn">⟳ Reset to original</button>
+        <button class="btn btn-reset" id="clearAllBtn">🗑 Clear all fields</button>
+    </div>
+
+    <div class="output-area">
+        <div class="output-header">
+            <span>📋 Transformed Output</span>
+            <button class="copy-btn" id="copyOutputBtn" style="font-size:0.75rem;">📋 Copy all</button>
+        </div>
+        <div id="resultContainer" class="result-list">
+            <div style="color:#6a7aa5; text-align:center; padding:1rem;">⏳ No transformation yet — click transform or edit lines</div>
+        </div>
+    </div>
+    <footer>
+        ⚡ Rules: Add/remove :31401 + http:// prefix (order aware). "Vice versa" supported: you can add http:// and port, or remove both/one.
+    </footer>
+</div>
+</body>
+</html>
