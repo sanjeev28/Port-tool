@@ -1,1 +1,252 @@
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, 'Segoe UI', 'Inter', 'Roboto', monospace;
+        }
 
+        body {
+            background: linear-gradient(145deg, #10131c 0%, #0b0e17 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            margin: 0;
+        }
+
+        .glass-card {
+            max-width: 860px;
+            width: 100%;
+            background: rgba(18, 22, 35, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 2.5rem;
+            border: 1px solid rgba(72, 85, 120, 0.35);
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+            padding: 2rem 2rem 2.2rem;
+            transition: all 0.2s ease;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #eef2ff, #b9c7f0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin: 0 0 0.25rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .sub {
+            color: #8d9bca;
+            border-left: 3px solid #3e5a9c;
+            padding-left: 1rem;
+            margin: 0.5rem 0 1.8rem 0;
+            font-size: 0.9rem;
+            font-weight: 450;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        label {
+            font-weight: 500;
+            color: #cddcff;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            background: #070b14;
+            border: 1.5px solid #2a334e;
+            border-radius: 1.4rem;
+            padding: 1rem 1.2rem;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            color: #eef5ff;
+            resize: vertical;
+            outline: none;
+            transition: 0.2s;
+            line-height: 1.5;
+        }
+
+        textarea:focus {
+            border-color: #5f7ec9;
+            box-shadow: 0 0 0 3px rgba(79, 112, 190, 0.3);
+        }
+
+        .checkbox-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.8rem;
+            background: rgba(12, 16, 27, 0.7);
+            border-radius: 2rem;
+            padding: 0.8rem 1.2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #262f46;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            cursor: pointer;
+            font-weight: 500;
+            color: #cfddff;
+        }
+
+        .check-item input {
+            width: 1.2rem;
+            height: 1.2rem;
+            accent-color: #4f72c4;
+            cursor: pointer;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2.2rem;
+            justify-content: center;
+        }
+
+        .btn {
+            background: #1e263f;
+            border: none;
+            padding: 0.75rem 1.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 3rem;
+            color: #f0f3ff;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            border: 1px solid #34446b;
+        }
+
+        .btn-primary {
+            background: #2f4580;
+            border-color: #6c8bd9;
+            color: white;
+            box-shadow: 0 4px 12px rgba(47, 69, 128, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #3c56a0;
+            transform: scale(0.97);
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            background: #262e48;
+            border-color: #47597e;
+        }
+        .btn-secondary:hover {
+            background: #2f3a5c;
+            transform: scale(0.97);
+        }
+
+        .btn-reset {
+            background: #1a1e2e;
+            border-color: #3a2e4e;
+            color: #b9c3ed;
+        }
+        .btn-reset:hover {
+            background: #23273f;
+        }
+
+        hr {
+            border-color: #2a314b;
+            margin: 1rem 0 1.2rem;
+        }
+
+        .output-area {
+            background: #03060ecc;
+            border-radius: 1.5rem;
+            padding: 0.2rem 0;
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+            padding: 0 0.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .result-list {
+            background: #04070f;
+            border-radius: 1.3rem;
+            padding: 0.8rem;
+            min-height: 140px;
+            max-height: 280px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+
+        .result-item {
+            background: #0f1320;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border-left: 4px solid #4f72c4;
+            color: #ccdeff;
+            word-break: break-all;
+            font-family: 'SF Mono', monospace;
+        }
+
+        .badge {
+            background: #1b2a4b;
+            border-radius: 3rem;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #b8d0ff;
+        }
+
+        .copy-btn {
+            background: none;
+            border: 1px solid #3d5180;
+            border-radius: 2rem;
+            padding: 0.2rem 0.9rem;
+            color: #b7c5ff;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        .copy-btn:hover {
+            background: #2a3a62;
+            color: white;
+        }
+
+        footer {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 1.6rem;
+            color: #5b6d99;
+        }
+        @media (max-width: 580px) {
+            .glass-card { padding: 1.5rem; }
+            .checkbox-row { gap: 1rem; flex-direction: column; align-items: flex-start; }
+            .btn { width: 100%; justify-content: center; }
+        }
